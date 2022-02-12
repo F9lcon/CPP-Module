@@ -23,7 +23,7 @@ class Contact
 		std::string	_phone_number;
 		std::string	_darkest_secret;
 		int			_index;
-		int			max_len;
+		int			_max_len;
 
 		void		show_data( std::string );
 

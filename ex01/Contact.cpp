@@ -3,7 +3,7 @@
 Contact::Contact( void )
 {
 	this->_index = -1;
-	this->max_len = 0;
+	this->_max_len = 0;
 	// std::cout << " Contact contructor called" << std::endl;
 }
 
@@ -53,8 +53,8 @@ void	Contact::get_data_from_user(std::string msg, std::string *field_to_set)
 		if (input.length())
 			break ;
 	}
-	if ((int) input.length() > this->max_len)
-		this->max_len = input.length();
+	if ((int) input.length() > this->_max_len)
+		this->_max_len = input.length();
 	*field_to_set = input;
 }
 
@@ -72,7 +72,7 @@ void	Contact::show_line_info(std::string fieldname, std::string value) const
 {
 	std::cout << std::setfill(' ') << std::left << GREEN;
 	std::cout << std::setw(14) << fieldname << ": " << RESET;
-	std::cout << std::right << std::setw(this->max_len + 1);
+	std::cout << std::right << std::setw(this->_max_len + 1);
 	std::cout << value << std::endl;
 }
 
