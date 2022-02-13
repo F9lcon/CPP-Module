@@ -23,7 +23,7 @@ fclean	:	clean
 			rm -f $(NAME) $(DEPENDS)
 
 x		:	all
-			./cpp  Damnit " ! " "Sorry students, I thought this thing was off."
+			./$(NAME)  Damnit " ! " "Sorry students, I thought this thing was off."
 
 re		:	fclean all
 

@@ -76,7 +76,6 @@ void	Contact::show_line_info(std::string fieldname, std::string value) const
 	std::cout << value << std::endl;
 }
 
-
 void	Contact::show_full_info( void ) const
 {
 	this->show_line_info("First name", this->_first_name);

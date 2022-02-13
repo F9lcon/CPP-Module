@@ -13,7 +13,6 @@
 #define CYAN    "\033[36m"      /* Cyan */
 #define WHITE   "\033[37m"      /* White */
 
-//nickname, phone number, and darkest secret
 class Contact
 {
 	private:
@@ -29,7 +28,7 @@ class Contact
 
 	public:
 		Contact( void );
-		~Contact ( void );
+		~Contact( void );
 		void	show_contact_for_search( void );
 		int		get_contact_index( void ) const;
 		void	set_new_data ( int );
