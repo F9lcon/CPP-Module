@@ -1,6 +1,6 @@
-SRC		=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC		=	main.cpp Karen.cpp
 OBJ		=	$(SRC:.cpp=.o)
-NAME	=	violence
+NAME	=	karen
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -MD -MP -std=c++98
 DEPENDS :=	$(SRC:.cpp=.d)

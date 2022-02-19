@@ -1,6 +1,6 @@
-SRC		=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC		=	main.cpp
 OBJ		=	$(SRC:.cpp=.o)
-NAME	=	violence
+NAME	=	replace
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -MD -MP -std=c++98
 DEPENDS :=	$(SRC:.cpp=.d)
@@ -23,7 +23,7 @@ fclean	:	clean
 			rm -f $(NAME) $(DEPENDS)
 
 x		:	all
-			./$(NAME)
+			./$(NAME) test "101" "3" 
 
 re		:	fclean all
 
