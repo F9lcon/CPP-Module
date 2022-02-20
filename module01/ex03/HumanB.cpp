@@ -20,7 +20,7 @@ void	HumanB::attack( void )
 		<< std::endl;
 }
 
-void	HumanB::setWeapon( Weapon weapon_el)
+void	HumanB::setWeapon( Weapon &weapon_el)
 {
 	this->_human_weapon = &weapon_el;
 }
