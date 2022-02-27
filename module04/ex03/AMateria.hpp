@@ -1,7 +1,11 @@
-#ifndef WRONG_WrongAnimal_HPP
-#define WRONG_WrongAnimal_HPP
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 
 #include <iostream>
+#include "ICharacter.hpp"
+#include "Character.hpp"
+
+class ICharacter;
 
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
@@ -13,18 +17,19 @@
 #define CYAN    "\033[36m"      /* Cyan */
 #define WHITE   "\033[37m"      /* White */
 
-class WrongAnimal
+class AMateria
 {
 protected:
 		std::string type;
 public:
-					WrongAnimal(	void );
-					~WrongAnimal( void );
-					WrongAnimal( WrongAnimal const &src);
-	WrongAnimal		&operator=( WrongAnimal const &rhs);
-	void			makeSound( void ) const;
-	std::string		getType( void ) const;
-
+						AMateria( void );
+						AMateria( std::string const & type );
+	virtual				~AMateria( void );
+						AMateria( AMateria const &src);
+	AMateria			&operator=( AMateria const &rhs);
+	std::string const	&getType( void );
+	virtual AMateria*	clone( void ) const = 0;
+	virtual void		use(ICharacter& target);
 };
 
 #endif

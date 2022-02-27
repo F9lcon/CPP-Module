@@ -1,5 +1,5 @@
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <iostream>
 
@@ -13,16 +13,17 @@
 #define CYAN    "\033[36m"      /* Cyan */
 #define WHITE   "\033[37m"      /* White */
 
-class Brain
+class AAnimal
 {
-private:
-	std::string	ideas[100];
+protected:
+		std::string type;
 public:
-			Brain( void );
-			~Brain( void );
-			Brain( Brain const &srs );
-	Brain	&operator=( Brain const &rhs );
-};
+					AAnimal(	void );
+	virtual			~AAnimal( void );
+					AAnimal( AAnimal const &src);
+	AAnimal			&operator=( AAnimal const &rhs);
+	virtual	void	makeSound( void ) const=0;
 
+};
 
 #endif

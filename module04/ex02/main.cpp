@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongCat.hpp"
@@ -9,7 +9,7 @@
 
 int	main( void )
 {
-	Animal	*a[ALL];
+	AAnimal	*a[ALL];
 
 	for (int i = 0; i < HALF; i++)
 	{
@@ -36,4 +36,7 @@ int	main( void )
 	obj_bb->makeSound();
 	delete obj_b;
 	delete obj_bb;
+	// std::cout << "------CHECK FOR ABSTRACT------" << std::endl;
+    // AAnimal abs_obj;     // doesn't compile
+
 }
