@@ -9,8 +9,8 @@ class	Character : public ICharacter
 {
 private:
 			std::string	_name;
-			AMateria	*inventory[4];
-			int			invent_fill;
+			AMateria	*equip_materia[4];
+			AMateria	*unequip_materia[4];
 						
 public:
 						Character( void );
@@ -19,9 +19,9 @@ public:
 	Character			&operator=( Character const &rhs );
 						~Character( void );
 	std::string const	&getName( void ) const;
-	// void				equip( AMateria* m );
-	// void				unequip( int idx );
-	// void				use( int idx, ICharacter& target );
+	void				equip( AMateria* m );
+	void				unequip( int idx );
+	void				use( int idx, ICharacter& target );
 };
 
 

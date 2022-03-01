@@ -3,17 +3,28 @@
 #include "Character.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "MateriaSource.hpp"
+
+// don't delete equip materia
 
 int main( void )
 {
-	AMateria *a = new Ice();
-    ICharacter  *b = new Character("me");
-	AMateria *c = new Cure();
-
-	a->use(*b);
-    c->use(*b);
-	delete a;
-	delete b;
-	delete c;
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	ICharacter* me = new Character("me");
+    AMateria* tmp;
+    tmp = src->createMateria("ice");
+    me->equip(tmp);
+    tmp = src->createMateria("cure");
+    me->equip(tmp);
+	ICharacter* bob = new Character("bob");
+	std::cout << "----CHECK OUTPUT FOR SUBJ----" << std::endl;
+	me->use(0, *bob);
+    me->use(1, *bob);
+	std::cout << "---------------------" << std::endl;
+	delete bob;
+	delete me;
+	delete src;
 	return (0);
 }

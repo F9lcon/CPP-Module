@@ -2,7 +2,7 @@
 
 Cure::Cure( void )
 {
-	this->type = "Cure";
+	this->type = "cure";
 	std::cout << GREEN << "Cure was created" << RESET << std::endl;
 }
 

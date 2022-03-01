@@ -12,7 +12,7 @@ public:
 						Cure( Cure const &src);
 	Cure				&operator=( Cure const &rhs);
 	Cure*				clone( void ) const;
-	void        		use(ICharacter& target);
+	void				use(ICharacter& target);
 };
 
 #endif
