@@ -9,7 +9,7 @@ int	main( void )
 	Bureaucrat	high_b("me", 1);
 	
 	AForm	*form;
-	form = a.makeForm("presidential request", "target");
+	form = a.makeForm("robotomy request", "target");
 	if (!form)
 		return (1);
 	
