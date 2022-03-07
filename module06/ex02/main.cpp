@@ -4,7 +4,6 @@
 #include "B.hpp"
 #include "C.hpp"
 
-
 Base * generate(void)
 {	
 	int	x;
@@ -65,7 +64,6 @@ void identify(Base& p)
 	catch(const std::bad_cast& e)
 	{
 	}
-	(void) tmp;
 }
 
 int main( void )
@@ -83,7 +81,7 @@ int main( void )
 	std::cout << "--check identify(*)--" << std::endl;
 	if (ptr_base)
 	{
-		std::cout << "varible ptr_base has type: ";
+		std::cout << "varible ptr_base (random) has type: ";
 		identify(ptr_base);
 		delete ptr_base;
 	}
