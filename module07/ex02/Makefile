@@ -1,6 +1,6 @@
-SRC		=	main.cpp
+SRC		=	main.cpp Array.cpp
 OBJ		=	$(SRC:.cpp=.o)
-NAME	=	casts
+NAME	=	templates
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -MD -MP -std=c++98
 DEPENDS :=	$(SRC:.cpp=.d)
