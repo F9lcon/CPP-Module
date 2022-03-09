@@ -1,6 +1,6 @@
 SRC		=	main.cpp
 OBJ		=	$(SRC:.cpp=.o)
-NAME	=	templates
+NAME	=	conversion
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -MD -MP -std=c++98
 DEPENDS :=	$(SRC:.cpp=.d)
@@ -23,7 +23,7 @@ fclean	:	clean
 			rm -f $(NAME)
 
 x		:	all
-			./$(NAME)
+			./$(NAME) " 123"
 
 leaks	:	all
 			leaks --atExit -- ./$(NAME)
