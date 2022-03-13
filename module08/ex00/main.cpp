@@ -11,6 +11,7 @@ int main( void )
 		vec1.push_back(1);
 		vec1.push_back(2);
 		vec1.push_back(3);
+		std::cout << vec1[10] << std::endl;
 		for (; it != ite; it++)
 			std::cout << *it << std::endl;
 

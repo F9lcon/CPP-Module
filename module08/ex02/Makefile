@@ -1,6 +1,6 @@
-SRC		=	main.cpp Span.cpp
+SRC		=	main.cpp
 OBJ		=	$(SRC:.cpp=.o)
-NAME	=	span
+NAME	=	stack
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -MD -MP -std=c++98
 DEPENDS :=	$(SRC:.cpp=.d)
